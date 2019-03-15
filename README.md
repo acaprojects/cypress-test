@@ -27,3 +27,4 @@ Items to test:
  - Check changing start time manually
  - Check changing end time manually
 
+Test should perform similar to [this](https://drive.google.com/file/d/1VhVJE2VcJY9eagrIc7jEqDZooEPRbUhY/view?usp=sharing)
