@@ -1,0 +1,139 @@
+// @Author: Alex Sorafumo <alex.sorafumo>
+// @Date:   12/10/2016 2:02 PM
+// @Email:  alex@yuion.net
+// @Filename: simple.style.scss
+// @Last modified by:   Alex Sorafumo
+// @Last modified time: 03/02/2017 1:58 PM
+
+@import 'shared.styles';
+
+.sample {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.1);
+}
+
+.logo {
+    margin: .5em;
+    height: 2em;
+    width: 100%;
+    img {
+        height: 100%;
+    }
+}
+
+.name {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title {
+    margin: .5em 0 .25em;
+    font-size: 1.5em;
+}
+
+.contents {
+    margin: 1em auto;
+    width: 32em;
+    max-width: calc(100vw - 2em);
+    background-color: #fff;
+    border-radius: .2em;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+    padding: 0 1em 1em;
+}
+
+.system-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    border: 1px solid rgba(0,0,0,.2);
+    height: 2em;
+    border-radius: 1em;
+    margin: .5em;
+    max-width: 95%;
+    width: 12em;
+    width: 18em;
+    padding: .25em 1em;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.media-player {
+    position: relative;
+    width: 32em;
+    height: 20em;
+    background-color: rgba(0,0,0,.54);
+    margin: 1em;
+    border-radius: .1em;
+    overflow: hidden;
+    .status {
+        color: #fff;
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+    .media-controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2em;
+        background-color: #B71C1C;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+            height: 1.5em;
+            width: 1.5em;
+        }
+
+        .play {
+            position: absolute;
+            top: 50%;
+            left: .5em;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+
+        .views {
+            color: #fff;
+            margin: 0 .5em;
+        }
+    }
+
+    @include respond-to(mobile) {
+        font-size: .8em;
+    }
+}
+
+input {
+    font-size: 1em;
+}
+
+.volume {
+    width: 20em;
+    display: flex;
+    align-items: center;
+    .slider {
+        flex-grow: 1;
+    }
+
+    img {
+        height: 1.5em;
+        width: 1.5em;
+    }
+}
